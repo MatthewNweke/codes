@@ -1,0 +1,304 @@
+body {
+    margin: 0;
+    list-style-type: none;
+    text-decoration: none;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: white;
+    box-shadow: 5px 5px 8px whitesmoke;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    position: sticky;
+    animation: head 1s cubic-bezier(.165, .84, .44, 1) 1;
+    top: 0;
+}
+
+@keyframes head {
+    from {
+        transform: translateY(-180%);
+    }
+
+    to {
+        transform: translateY(40%);
+    }
+}
+
+#over {
+    display: none;
+}
+
+#new {
+
+    height: 70px;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    flex-wrap: wrap;
+
+}
+
+
+
+#first-nav-bar #first-item li {
+    display: inline-block;
+    margin-right: 15px;
+    font-family: montserrat;
+    list-style-type: none;
+}
+
+#first-nav-bar #first-item li a {
+    text-decoration: none;
+    color: black;
+}
+
+#first-nav-bar #first-item li .main:hover {
+    color: brown;
+}
+
+#top-animation {
+    background-color: #012e55;
+    width: 80px;
+    height: 25px;
+    padding: 12px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    color: white;
+    animation: animate 7s infinite cubic-bezier(.165, .84, .44, 1);
+    position: relative;
+    left: 10px;
+    top: 10px;
+    animation-direction: alternate;
+    font-family: montserrat;
+    z-index: -1;
+    font-weight: bold;
+
+
+}
+
+#order {
+    margin-left: 60px;
+    border: 1px solid black;
+    padding: 15px 25px;
+    font-family: PT Sans',sans-serif';
+    transition: all 1s ease-out;
+    color: black;
+}
+
+#first-nav-bar #first-item li #order:hover {
+    background-color: #012e55;
+    color: white;
+}
+
+@keyframes animate {
+    from {
+        transform: rotate(40deg);
+        position: relative;
+        left: 0px;
+    }
+
+    to {
+        transform: rotate(40deg);
+        position: relative;
+        left: 50%;
+    }
+}
+
+.fa.fa-arrow-right {
+    font-size: 13px;
+}
+
+
+
+
+#line-over {
+    display: none;
+}
+
+
+#redcol {
+
+    background: rgba(0, 0, 0, 0);
+    width: 100%;
+    min-height: 1000px;
+    display: none;
+    position: fixed;
+    transform: translateY(22%);
+    z-index: -1;
+    overflow: hidden;
+
+}
+
+#first_pics {
+    width: 60vw;
+    height: 70vh;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    background-image: url("./restimages/rest2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: contain;
+
+}
+
+#cover .min {
+    color: white;
+    background-color: black;
+}
+
+#cover li {
+    list-style-type: none;
+    transform: translateX(-12%);
+
+}
+
+#cover li a {
+    text-decoration: none;
+}
+
+#cover {
+
+    position: fixed;
+    width: 100%;
+    top: -10px;
+    background-color: black;
+    overflow: hidden;
+    line-height: 2;
+    font-size: 12px;
+    font-family: 'PT Sans', sans-serif;
+    display: none;
+}
+
+.fa.fa-bars {
+
+    position: relative;
+    left: 88%;
+    font-size: 25px;
+    visibility: hidden;
+    bottom: 50px;
+    cursor: pointer;
+
+}
+
+#pics1 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+#first {
+color: white;
+font-size: 22px;
+position: relative;
+left: 70%;
+}
+
+/* media query for devices which have minimum width of 1025 pixels*/
+@media (max-width:1164px) {
+    header {
+
+        height: 140px;
+        font-size: 11px;
+    }
+
+    #order {
+        margin-left: auto;
+    }
+}
+
+@media (max-width:1027px) {
+    header {
+        height: 130px;
+        font-size: 10px;
+    }
+
+    #top-animation {
+
+        border-radius: 5px;
+
+    }
+
+    #order {
+        margin-left: auto;
+    }
+
+    .fa.fa-square-o {
+        display: none;
+    }
+}
+
+@media (max-width:916px) {
+    header {
+        height: 110px;
+        font-size: 8px;
+
+    }
+
+    #order {
+        margin-left: auto;
+    }
+
+    #top-animation {
+        font-size: 10px;
+        padding: 8px;
+        width: 70px;
+        height: 20px;
+    }
+
+    #pics1 {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+
+@media (max-width:782px) {
+    header {
+        display: none;
+
+    }
+
+    .fa.fa-bars {
+        visibility: visible;
+    }
+
+    #cover li {
+        list-style-type: none;
+        transform: translateX(-38px);
+        line-height: 3;
+
+    }
+
+    #cover li a {
+        display: block;
+        font-size: 13px;
+    }
+
+    #cover li a:hover {
+        background-color: #012e55;
+    }
+
+    /* #cover {
+        top: -3%;
+    } */
+
+
+
+    #top-animation {}
+}
+
+@media (max-width:724) {
+
+    #cover li a {
+        display: block;
+        font-size: 11px;
+    }
+
+    #cover li {
+        line-height: 2;
+    }
+}
