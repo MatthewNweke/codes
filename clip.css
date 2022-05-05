@@ -177,7 +177,7 @@ header {
 .fa.fa-bars {
 
     position: relative;
-    left: 88%;
+    left: 86%;
     font-size: 25px;
     visibility: hidden;
     bottom: 50px;
@@ -190,11 +190,13 @@ header {
     height: 100px;
     border-radius: 50%;
 }
+
 #first {
-color: white;
-font-size: 22px;
-position: relative;
-left: 70%;
+    color: white;
+    font-size: 28px;
+    position: relative;
+    left: 90%;
+    bottom: 10px;
 }
 
 /* media query for devices which have minimum width of 1025 pixels*/
@@ -300,5 +302,24 @@ left: 70%;
 
     #cover li {
         line-height: 2;
+    }
+
+}
+
+@media (max-width:667px) {
+    #first {
+        left: 88%;
+    }
+}
+
+@media (max-width:553px) {
+    #first {
+        left: 86%;
+    }
+}
+
+@media (max-width:227px) {
+    #first {
+        left: 80%;
     }
 }
